@@ -1,0 +1,147 @@
+<!DOCKTYPE HTML>
+<html>
+	<head>
+		<title>
+			 Event listener KeyDown
+		</title>
+		<style>
+			/* Base container centering the card */
+			.form-container {
+			  display: flex;
+			  justify-content: center;
+			  align-items: center;
+			  <!-- min-height: 100vh; -->
+			  background-color: #f3f4f6;
+			  font-family: system-ui, -apple-system, sans-serif;
+			  padding: 20px;
+			  margin-top:8%;
+			}
+
+			/* Elegant card design */
+			.form-card {
+			  background: #ffffff;
+			  padding: 40px;
+			  border-radius: 12px;
+			  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+			  width: 100%;
+			  max-width: 400px;
+			}
+
+			.form-card h2 {
+			  margin: 0 0 8px 0;
+			  color: #111827;
+			  font-size: 24px;
+			  font-weight: 600;
+			}
+
+			.form-subtitle {
+			  margin: 0 0 24px 0;
+			  color: #6b7280;
+			  font-size: 14px;
+			}
+
+			/* Accessible layouts for stacked elements */
+			.input-group {
+			  display: flex;
+			  flex-direction: column;
+			  gap: 6px;
+			  margin-bottom: 20px;
+			}
+
+			.input-group label {
+			  font-size: 13px;
+			  font-weight: 500;
+			  color: #374151;
+			}
+
+			/* Polished input states */
+			.input-group input {
+			  padding: 12px 14px;
+			  border: 1px solid #d1d5db;
+			  border-radius: 6px;
+			  font-size: 15px;
+			  color: #111827;
+			  outline: none;
+			  transition: border-color 0.2s, box-shadow 0.2s;
+			}
+
+			.input-group input:focus {
+			  border-color: #4f46e5;
+			  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+			}
+
+			.input-group input::placeholder {
+			  color: #9ca3af;
+			}
+
+			/* Dynamic submit button with micro-interactions */
+			.submit-btn {
+			  width: 100%;
+			  padding: 12px;
+			  background-color: #4f46e5;
+			  color: white;
+			  border: none;
+			  border-radius: 6px;
+			  font-size: 15px;
+			  font-weight: 500;
+			  cursor: pointer;
+			  transition: background-color 0.2s, transform 0.1s;
+			}
+
+			.submit-btn:hover {
+			  background-color: #4338ca;
+			}
+
+			.submit-btn:active {
+			  transform: scale(0.98);
+			}
+			body {
+			  background-image:url('https://images.unsplash.com/photo-1686380021714-4790ba04bd2f?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+			}
+		</style>
+	</head>
+<body>
+	
+	<div class="form-container">
+		<div class="form-card">
+				<h2>Get in Touch</h2>
+				<p class="form-subtitle">We would love to hear from you. Fill out the details below.</p>
+    
+			<form id="myform" action="" method="POST">
+				<div class="input-group">
+					<label for="userName">Full Name</label>
+					<input type="text" id="userName" placeholder="John Doe" required autocomplete="name">
+				</div>
+      
+				<div class="input-group">
+					<label for="userEmail">Email Address</label>
+					<input type="email" id="userEmail" placeholder="you@example.com" required autocomplete="email">
+				</div>
+    
+				<button "type="submit" class="submit-btn">
+					Send Message
+				</button>
+			</form>
+		</div>
+	</div>
+</body>
+	<script>
+		window.addEventListener('keydown', function (vt) {
+			if (vt.ctrlKey && vt.key.toLowerCase() === 'r') {
+			vt.preventDefault();
+		}
+	});
+		
+		window.addEventListener('keydown', function (ab) {
+			console.log(ab)
+			if (ab.ctrlKey && ab.shiftKey && ab.key.toLowerCase() === 'i') {
+			ab.preventDefault();
+
+			
+		}
+	});
+		
+	</script>
+</html>
+
+	
